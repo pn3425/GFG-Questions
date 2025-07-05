@@ -68,6 +68,12 @@ class Solution {
 //-----------------------------------------------------------------------------------------
 
    // ACTUAL ANSWER VARIETY 2 
+   /*
+      TC -> O(N) + O(min(pos,neg)) + O(leftovers)
+            O(N) + O(N) = O(2N)
+
+      SC -> O(N)
+   */  
    
     int n = arr.size();
     vector<int> pos,neg;
