@@ -15,7 +15,54 @@ class Solution {
     }
 };
 
+/*
+⚙️ Step-by-step working:
 
+We use two pointers:
+
+i → points to the last unique element found so far.
+j → scans the array from left to right.
+
+Whenever a new unique element is found:
+Place it next to the last unique (arr[i+1] = arr[j]).
+
+Move i forward.
+
+At the end:
+The number of unique elements = i+1.
+
+arr = [1, 1, 2, 2, 3, 3, 3, 4]
+
+Step-by-step:
+
+Start: i = 0, so arr[i] = 1.
+
+Loop:
+
+j = 1 → arr[1] = 1, arr[i] = 1 → duplicate → do nothing.
+
+j = 2 → arr[2] = 2, arr[i] = 1 → new unique
+→ arr[i+1] = arr[2] → arr[1] = 2 → array becomes [1, 2, 2, 2, 3, 3, 3, 4].
+→ i = 1.
+
+j = 3 → arr[3] = 2, arr[i] = 2 → duplicate → skip.
+
+j = 4 → arr[4] = 3, arr[i] = 2 → new unique
+→ arr[i+1] = arr[4] → arr[2] = 3 → [1, 2, 3, 2, 3, 3, 3, 4].
+→ i = 2.
+
+j = 5 → arr[5] = 3, arr[i] = 3 → duplicate → skip.
+
+j = 6 → arr[6] = 3, arr[i] = 3 → duplicate → skip.
+
+j = 7 → arr[7] = 4, arr[i] = 3 → new unique
+→ arr[i+1] = arr[7] → arr[3] = 4 → [1, 2, 3, 4, 3, 3, 3, 4].
+→ i = 3.
+
+Loop ends.
+
+Return i+1 = 4.
+*/
 
 
 /*
