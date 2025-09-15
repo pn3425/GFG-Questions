@@ -6,7 +6,7 @@ class Solution {
     // Function to return the count of number of elements in union of two arrays.
     int findUnion(vector<int>& a, vector<int>& b) {
         // code here
-        set<int> st;    //Using set here because it stores everything in sorted order and will only store unique elements 
+        set<int> st;    //Using set here because it stores everything in sorted order and will only store unique elements, UNION IS COMBINE (UNIQUE ELEMENT) 
         for(int i=0;i<a.size();i++)
         {
             st.insert(a[i]);
