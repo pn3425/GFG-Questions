@@ -60,6 +60,16 @@ class Solution {
         
         Now check the occurence of the element 1, since it occured 4 times which is greater than 7/2
         Hence Answer is 1
+
+        This is the Boyer–Moore Majority Vote Algorithm:
+        
+        Phase 1: Find candidate.
+        
+        Phase 2: Verify candidate.
+        
+        Time complexity: O(n)
+        
+        Space complexity: O(1)
         */
         
         int count = 0;   
